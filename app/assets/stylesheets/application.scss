@@ -79,3 +79,43 @@ $hoover-orange-color: #b94b07;
     text-decoration: underline;
   }
 }
+
+.footer {
+  min-height: 60px;
+  font-size: 0.9rem;
+  
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .info {
+    a {
+      margin-right: 0.5rem;
+      color: $light-orange-color;
+      height: 30px;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #ff741e;
+      text-decoration: underline;
+    }
+  }
+
+  a {
+    margin-right: 0.5rem;
+    color: $light-orange-color;
+    height: 30px;
+    text-decoration: none;
+  }
+
+  .social-links {
+    span:first-child {
+      margin-right: 0.8rem;
+    }
+  }
+  svg {
+    fill: $light-orange-color;
+    width: 30px;
+    height: auto;
+  }
+}
