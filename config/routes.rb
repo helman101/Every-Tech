@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  resources :users, except: [:edit, :update]
+
+  get 'user/sign_in', to: 'sessions#sign_in'
+  post 'user/sign_in', to: 'sessions#create'
+
+  root 'sessions#sign_in'
 end
