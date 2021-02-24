@@ -12,7 +12,8 @@ class UsersController < ApplicationController
       session[:current_user_id] = @user.id
       redirect_to @user, notice: 'Sign up successfully'
     else
-      redirect_to @user, notice: 'User does not exist'
+      flash[:alert] = 'User does not exist'
+      render :sign_in
     end
   end
 
@@ -28,7 +29,7 @@ class UsersController < ApplicationController
 
   def require_login
     unless session[:current_user_id]
-      flash[:error] = "You must be signed in to access this section"
+      flash[:alert] = 'You must be signed in to access this section'
       redirect_to user_sign_in_path
     end
   end
