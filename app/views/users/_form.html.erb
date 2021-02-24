@@ -1,0 +1,7 @@
+<%= form_for @user do |f| %>
+  <div class="form-group mb-3">
+    <%= f.label :name %>
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+  <%= f.submit "Sign in", class: 'btn btn-success mb-2' %>
+<% end %>
