@@ -14,4 +14,46 @@
  *= require_self
  */
 
- @import 'bootstrap'
+ @import 'bootstrap';
+
+$brown-color: #4E443F;
+$orange-color: #F22405;
+$light-orange-color: #F76208;
+$hoover-orange-color: #b94b07;
+
+.text-brown {
+ color: $brown-color;
+}
+
+.bg-brown {
+ background-color: $brown-color;
+}
+
+.text-orange {
+ color: $orange-color;
+}
+
+.bg-orange {
+ background-color: $orange-color;
+}
+
+.text-light-orange {
+ color: $light-orange-color;
+}
+
+.bg-light-orange {
+ background-color: $light-orange-color;
+}
+
+.user-forms {
+  box-shadow: 0 0 4px 4px rgba(128, 128, 128, 0.603);
+  a {
+    color: $light-orange-color;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #b94b07;
+    text-decoration: underline;
+  }
+}
