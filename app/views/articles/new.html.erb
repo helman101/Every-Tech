@@ -1,4 +1,4 @@
-<section class='create-article container d-flex flex-column align-items-center pt-5'>
+<section class='create-article container d-flex flex-column align-items-center pt-4'>
   <h1 class='text-center mb-3'>Create An Article!</h1>
   <div class="article-form wrapper w-50">
     <%= form_for :articles do |f| %>
@@ -18,14 +18,14 @@
       </div>
 
       <%= f.fields_for :categories do |c| %>
-        <div class="form-group">
-          <%= c.label :name, 'Select category', class: 'mb-1' %> <br>
+        <%= c.label :name, 'Select category', class: 'mb-1' %> <br>
+        <div class="form-group d-flex justify-content-between mb-3">
           <%= c.select :name, options_for_select(['Computers', 'Robotics', 'Video Games', 'Phones']), {}, { class: 'form-control' } %>
-          <%= c.submit 'Add category', class: 'btn btn-success' %>
+          <%= c.submit 'Add category', class: 'btn btn-success ml-5' %>
         </div>
       <% end %>
 
-      <%= f.submit 'Create', class: 'btn btn-success' %>
+      <%= f.submit 'Create', class: 'btn btn-success w-100' %>
     <% end %>
   </div>
 </section>
