@@ -46,8 +46,14 @@ $yellow-color: #F2E30C;
  background-color: $light-orange-color;
 }
 
+body {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .user-forms {
-  box-shadow: 0 0 4px 4px rgba(128, 128, 128, 0.603);
+  box-shadow: 0 4px 2px -2px rgba(128, 128, 128, 0.603);
   a {
     color: $light-orange-color;
     transition: 0.3s;
@@ -61,7 +67,6 @@ $yellow-color: #F2E30C;
 
 .navbar {
   min-height: 60px;
-  box-shadow: 0 0 3px 3px gray;
   .navbar-brand {
     font-size: 1.3rem;
   }
@@ -81,8 +86,10 @@ $yellow-color: #F2E30C;
   }
 }
 
+
 .footer {
   min-height: 60px;
+  max-width: 1300px;
   position: absolute;
   bottom: 0;
   font-size: 0.9rem;
@@ -124,27 +131,31 @@ $yellow-color: #F2E30C;
 }
 
 .signs {
-  height: 70vh;
+  height: 60vh;
 }
 
-.wrapper {
-  height: 100%;
-  .category-name {
-    border-bottom: 3px solid $yellow-color;
-    width: max-content;
-    position: absolute;
-    top: 5%;
-    left: 8%;
-  }
-  .article-title {
-    position: absolute;
-    bottom: 10%;
-    left: 8%;
-  }
-  img {
-    width: 100%;
-    height: 25vh;
-    object-fit: cover;
+.categories {
+  margin-left: auto;
+  margin-right: auto;
+  .wrapper {
+    height: 100%;
+    .category-name {
+      border-bottom: 3px solid $yellow-color;
+      width: max-content;
+      position: absolute;
+      top: 5%;
+      left: 8%;
+    }
+    .article-title {
+      position: absolute;
+      bottom: 10%;
+      left: 8%;
+    }
+    img {
+      width: 100%;
+      height: 30vh;
+      object-fit: cover;
+    }
   }
 }
 
@@ -157,14 +168,15 @@ $yellow-color: #F2E30C;
 }
 
 .cate {
-  min-height: 25vh;
+  min-height: 30vh;
+  margin-bottom: 100px;
 }
 
 .most-pop {
-  height: 60vh;
+  height: 57vh;
   img {
     width: 100%;
-    height: 60vh;
+    height: 57vh;
     object-fit: cover;
   }
   .article-title {
@@ -174,3 +186,4 @@ $yellow-color: #F2E30C;
     left: 3%;
   }
 }
+
