@@ -209,6 +209,11 @@ body {
   }
 }
 
+.alert {
+  max-height: 30px;
+  padding: 0;
+}
+
 .create-article {
   height: 86vh;
   textarea {
