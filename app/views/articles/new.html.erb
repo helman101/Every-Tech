@@ -1,27 +1,28 @@
-<section class='create-article container'>
-  <h1>Create An Article!</h1>
-  <%= form_for :articles do |f| %>
-    <div class="form-group">
-      <%= f.label :title %>
-      <%= f.text_field :title, class: 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :content %>
-      <%= f.text_area :content, class: 'form-control' %>
-    </div>
-
-    <div class="form-group">
-      <%= f.label :article_image %>
-      <%= f.file_field :image, class: 'form-control-file' %>
-    </div>
-
-    <%= f.fields_for :categories do |c| %>
-      <div class="form-group">
-        <%= c.label :name, 'Select category' %>
-        <%= c.select :name, options_for_select(['Computers', 'Robotics', 'Video Games', 'Phones']), {}, { class: 'form-control' } %>
+<section class='create-article container d-flex flex-column align-items-center pt-5'>
+  <h1 class='text-center mb-3'>Create An Article!</h1>
+  <div class="article-form wrapper w-50">
+    <%= form_for :articles do |f| %>
+      <div class="form-group pb-3">
+        <%= f.label :title, class: 'mb-1' %>
+        <%= f.text_field :title, autofocus: true, class: 'form-control' %>
       </div>
-    <% end %>
 
-  <% end %>
+      <div class="form-group pb-3">
+        <%= f.label :content, class: 'mb-1' %>
+        <%= f.text_area :content, class: 'form-control' %>
+      </div>
+
+      <div class="form-group pb-3 d-flex flex-column">
+        <%= f.label :article_image, class: 'mb-1' %>
+        <%= f.file_field :image, class: 'form-control-file' %>
+      </div>
+
+      <%= f.fields_for :categories do |c| %>
+        <div class="form-group">
+          <%= c.label :name, 'Select category', class: 'mb-1' %>
+          <%= c.select :name, options_for_select(['Computers', 'Robotics', 'Video Games', 'Phones']), {}, { class: 'form-control' } %>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </section>
