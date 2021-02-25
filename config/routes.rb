@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   post 'user/sign_in', to: 'sessions#create'
   delete 'user/log_out', to: 'sessions#log_out'
 
-  root 'sessions#sign_in'
+  root 'categories#show'
 end
