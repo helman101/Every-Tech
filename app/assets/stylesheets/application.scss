@@ -20,6 +20,7 @@ $brown-color: #4E443F;
 $orange-color: #F22405;
 $light-orange-color: #F76208;
 $hoover-orange-color: #b94b07;
+$yellow-color: #F2E30C;
 
 .text-brown {
  color: $brown-color;
@@ -124,4 +125,37 @@ $hoover-orange-color: #b94b07;
 
 .signs {
   height: 70vh;
+}
+
+.wrapper {
+  height: 100%;
+  .category-name {
+    border-bottom: 3px solid $yellow-color;
+    width: max-content;
+    position: absolute;
+    top: 5%;
+    left: 8%;
+  }
+  .article-title {
+    position: absolute;
+    bottom: 5%;
+    left: 8%;
+  }
+  img {
+    width: 100%;
+    height: 25vh;
+    object-fit: cover;
+  }
+}
+
+.gradient {
+  position: absolute;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.596), rgba(255, 255, 255, 0));
+}
+
+.cate {
+  min-height: 25vh;
 }
