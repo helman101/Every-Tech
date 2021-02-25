@@ -4,21 +4,18 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    @article = current_user.articles.build(article_params)
+    @article = Article.new(article_params)
     if @article.save
-      redirect_to 
+      current_user.articles << @article
+      redirect_to article_path(@article), notice: 'Article created succesfully'
     else
-      render :new, notice: 'impossible create this article'
+      redirect_to new_article_path, alert: 'This article can be create'
     end
   end
 
   private 
 
   def article_params
-    params.require(:articles).permit(:title, :content, :image)
-  end
-
-  def categories_params
-    params.require(:categories).permit(:name)
+    params.require(:article).permit(:title, :content, :image)
   end
 end

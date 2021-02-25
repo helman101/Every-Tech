@@ -1,7 +1,7 @@
 <section class='create-article container d-flex flex-column align-items-center pt-4'>
   <h1 class='text-center mb-3'>Create An Article!</h1>
   <div class="article-form wrapper w-50">
-    <%= form_for :articles do |f| %>
+    <%= form_with model: Article do |f| %>
       <div class="form-group pb-3">
         <%= f.label :title, class: 'mb-1' %>
         <%= f.text_field :title, autofocus: true, class: 'form-control' %>
@@ -17,10 +17,10 @@
         <%= f.file_field :image, class: 'form-control-file' %>
       </div>
 
-      <%= f.fields_for :categories do |c| %>
+      <%= f.fields_for :category do |c| %>
         <%= c.label :name, 'Select category', class: 'mb-1' %> <br>
         <div class="form-group d-flex justify-content-between mb-3">
-          <%= c.select :name, options_for_select(['Computers', 'Robotics', 'Video Games', 'Phones']), {}, { class: 'form-control' } %>
+          <%= c.select :name, options_for_select([['None', nil],'Computers', 'Robotics', 'Video Games', 'Phones']), {}, { class: 'form-control'} %>
           <%= c.submit 'Add category', class: 'btn btn-success ml-5' %>
         </div>
       <% end %>
