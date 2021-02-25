@@ -20,6 +20,7 @@ $brown-color: #4E443F;
 $orange-color: #F22405;
 $light-orange-color: #F76208;
 $hoover-orange-color: #b94b07;
+$darker-yellow-color: #F2A649;
 $yellow-color: #F2E30C;
 
 .text-brown {
@@ -153,7 +154,7 @@ body {
     }
     img {
       width: 100%;
-      height: 30vh;
+      height: 100%;
       object-fit: cover;
     }
   }
@@ -179,6 +180,30 @@ body {
     position: absolute;
     bottom: 5%;
     left: 3%;
+  }
+}
+
+.art-x-cat {
+  height: 87vh;
+  .article-img {
+    background-color: lightcoral;
+    width: 25%;
+    height: 43.5vh;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  .article-text {
+    width: 25%;
+    height: 43.5vh;
+    .category {
+      font-weight: bold;
+      color: $darker-yellow-color;
+      border-bottom: 2px solid $darker-yellow-color;
+      width: max-content;
+    }
   }
 }
 
