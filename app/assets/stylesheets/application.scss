@@ -159,3 +159,17 @@ $yellow-color: #F2E30C;
 .cate {
   min-height: 25vh;
 }
+
+.most-pop {
+  height: 60vh;
+  img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+  }
+  .article-title {
+    position: absolute;
+    bottom: 5%;
+    left: 3%;
+  }
+}
