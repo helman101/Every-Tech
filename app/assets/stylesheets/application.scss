@@ -139,7 +139,7 @@ $yellow-color: #F2E30C;
   .article-title {
     position: absolute;
     bottom: 5%;
-    left: 8%;
+    left: 10%;
   }
   img {
     width: 100%;
@@ -168,6 +168,7 @@ $yellow-color: #F2E30C;
     object-fit: cover;
   }
   .article-title {
+    font-size: 2rem;
     position: absolute;
     bottom: 5%;
     left: 3%;
