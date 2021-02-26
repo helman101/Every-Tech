@@ -17,11 +17,25 @@
         <%= f.file_field :image, class: 'form-control-file' %>
       </div>
 
-      <%= f.fields_for :category do |c| %>
-        <%= c.label :name, 'Select category', class: 'mb-1' %> <br>
-        <div class="form-group d-flex justify-content-between mb-3">
-          <%= c.select :name, options_for_select([['None', nil],'Computers', 'Robotics', 'Video Games', 'Phones']), {}, { class: 'form-control'} %>
-          <%= c.submit 'Add category', class: 'btn btn-success ml-5' %>
+      <%= f.fields_for :categories do |c| %>
+        <%= c.label :name, 'Select categories', class: 'mb-1' %> <br>
+        <div class="d-flex justify-content-between mb-3">
+          <div class='form-group'>
+            <%= c.check_box :name, value: 'Video Games' %>
+            <%= c.label :name, 'Video Games' %>
+          </div>
+          <div class='form-group'>
+            <%= c.check_box :name, value: 'Computers' %>
+            <%= c.label :name, 'Computers' %>
+          </div>
+          <div class='form-group'>
+            <%= c.check_box :name, value: 'Phones' %>
+            <%= c.label :name, 'Phones' %>
+          </div>
+          <div class='form-group'>
+            <%= c.check_box :name, value: 'Robotics' %>
+            <%= c.label :name, 'Robotics' %>
+          </div>
         </div>
       <% end %>
 
