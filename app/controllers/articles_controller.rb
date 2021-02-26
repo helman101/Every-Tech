@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
       current_user.articles << @article
       redirect_to article_path(@article), notice: 'Article created succesfully'
     else
-      redirect_to new_article_path, alert: 'This article can be create'
+      redirect_to new_article_path, alert: 'This article can\'t be create'
     end
   end
 
