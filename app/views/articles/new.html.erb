@@ -1,7 +1,7 @@
 <section class='create-article container d-flex flex-column align-items-center pt-4'>
   <h1 class='text-center mb-3'>Create An Article!</h1>
   <div class="article-form wrapper w-50">
-    <%= form_with model: Article do |f| %>
+    <%= form_for @article do |f| %>
       <div class="form-group pb-3">
         <%= f.label :title, class: 'mb-1' %>
         <%= f.text_field :title, autofocus: true, class: 'form-control' %>

@@ -1,4 +1,6 @@
-<div class="container">
-  <h1><%= @article.title %></h1>
-  <%= image_tag @article.image %>
+<div class="container articles">
+  <div><%= @article.title %></div>
+  <p><%= @article.content %></p>
+  <%= image_tag @article.image, class: 'article-image' %>
+  <div>Categories: <%= @article.categories.first.name %></div>
 </div>
