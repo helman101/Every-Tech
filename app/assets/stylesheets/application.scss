@@ -47,6 +47,10 @@ $yellow-color: #F2E30C;
  background-color: $light-orange-color;
 }
 
+.text-darker-yellow {
+  color: $darker-yellow-color;
+}
+
 body {
   margin-left: auto;
   margin-right: auto;
@@ -221,6 +225,19 @@ body {
   }
   select {
     width: 50%;
+  }
+}
+
+.articles {
+  max-width: 60%;
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .info-group {
+    font-size: 0.9rem;
+    font-weight: bold;
   }
 }
 

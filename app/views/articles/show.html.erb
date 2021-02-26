@@ -1,6 +1,15 @@
-<div class="container articles">
-  <div><%= @article.title %></div>
-  <p><%= @article.content %></p>
-  <%= image_tag @article.image, class: 'article-image' %>
-  <div>Categories: <%= @article.categories.first.name %></div>
+<div class="container articles mt-5">
+  <div class='title text-center mb-5 text-light-orange'><%= @article.title %></div>
+  <%= image_tag @article.image, class: 'article-image w-100 mb-3' %>
+  <div class='info-group d-flex justify-content-between p-2 text-light-orange'>
+    <span class="time">
+      Created on: 
+      <%= @article.created_at.strftime("%m/%d/%Y") %>
+    </span>
+    <span class="category">
+      Categories: 
+      <%= @article.categories.first.name %>
+    </span>
+  </div>
+  <p class='content p-3'><%= @article.content %></p>
 </div>
