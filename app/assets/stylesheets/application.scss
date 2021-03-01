@@ -43,6 +43,10 @@ $yellow-color: #F2E30C;
  color: $light-orange-color;
 }
 
+.text-darker-yellow {
+  color: $darker-yellow-color;
+}
+
 .bg-light-orange {
  background-color: $light-orange-color;
 }
@@ -279,5 +283,14 @@ main {
 
 .no-articles {
   height: 80vh;
+}
+
+.vote {
+  color: $darker-yellow-color;
+  text-decoration: none;
+  &:hover {
+    color: #c4873c;
+    text-decoration: underline;
+  }
 }
 

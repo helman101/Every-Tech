@@ -1,4 +1,4 @@
-<div class="container articles pt-5">
+<div class="container articles pt-5 mb-5">
   <div class='title text-center mb-5 text-light-orange'><%= @article.title %></div>
   <div class="article-image">
     <%= image_tag @article.image, class: 'w-100 mb-3' %>
@@ -13,7 +13,7 @@
       <%= @article.categories.first.name %>
     </span>
     <br>
-    <span><%= vote_or_unvote(@article) %> <%= @article.votes.count %></span>
+    <span><%= vote_or_unvote(@article) %> | <%= @article.votes.count %> Votes</span>
   </div>
   <p class='content p-3'><%= @article.content %></p>
 </div>
