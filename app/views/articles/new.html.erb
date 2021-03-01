@@ -1,0 +1,45 @@
+<section class='create-article container d-flex flex-column align-items-center pt-4'>
+  <h1 class='text-center mb-3'>Create An Article!</h1>
+  <div class="article-form wrapper w-50">
+    <%= form_for @article do |f| %>
+      <div class="form-group pb-3">
+        <%= f.label :title, class: 'mb-1' %>
+        <%= f.text_field :title, autofocus: true, class: 'form-control' %>
+      </div>
+
+      <div class="form-group pb-3">
+        <%= f.label :content, class: 'mb-1' %>
+        <%= f.text_area :content, class: 'form-control' %>
+      </div>
+
+      <div class="form-group pb-3 d-flex flex-column">
+        <%= f.label :image, class: 'mb-1' %>
+        <%= f.file_field :image, class: 'form-control-file' %>
+      </div>
+
+      <%= f.fields_for :categories do |c| %>
+        <%= c.label :name, 'Select categories', class: 'mb-1' %> <br>
+        <div class="d-flex form-group justify-content-between mb-3">
+          <div>
+            <%= c.radio_button 'Video Games', 1%>
+            <%= c.label 'Video Games' %>
+          </div>
+          <div>
+            <%= c.radio_button :Computers, 2 %>
+            <%= c.label :Computers %>
+          </div>
+          <div>
+            <%= c.radio_button :Phones, 3 %>
+            <%= c.label :Phones %>
+          </div>
+          <div>
+            <%= c.radio_button :Robotics, 4 %>
+            <%= c.label :Robotics %>
+          </div>
+        </div>
+      <% end %>
+
+      <%= f.submit 'Create', class: 'btn btn-success w-100' %>
+    <% end %>
+  </div>
+</section>
