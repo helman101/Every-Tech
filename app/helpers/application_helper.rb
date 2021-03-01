@@ -18,4 +18,13 @@ module ApplicationHelper
       render partial: 'shared/alert'
     end
   end
+
+  def vote_or_unvote(article)
+    vote = Vote.find_by(article: article, user: current_user)
+    if vote
+      render partial: 'shared/unvote', object: vote
+    else
+      render partial: 'shared/vote'
+    end
+  end
 end
