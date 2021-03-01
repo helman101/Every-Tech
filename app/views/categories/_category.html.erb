@@ -5,6 +5,6 @@
     <% end %>
     <span class='category-name text-white'><%= category.name %></span>
     <span class='article-title text-white'><%= link_to category.articles.order('created_at desc').first.title, category.articles.order('created_at desc').first %></span>
-    <%= image_tag category.articles.first.image %>
+    <%= image_tag category.articles.order('created_at desc').first.image %>
   </div>
 </article>
