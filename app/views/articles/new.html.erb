@@ -21,19 +21,19 @@
         <%= c.label :name, 'Select categories', class: 'mb-1' %> <br>
         <div class="d-flex form-group justify-content-between mb-3">
           <div>
-            <%= c.radio_button 'Video Games', 1%>
+            <%= c.check_box 'Video Games', {} , 1 , nil%>
             <%= c.label 'Video Games' %>
           </div>
           <div>
-            <%= c.radio_button :Computers, 2 %>
+            <%= c.check_box :Computers, {} , 2 , nil %>
             <%= c.label :Computers %>
           </div>
           <div>
-            <%= c.radio_button :Phones, 3 %>
+            <%= c.check_box :Phones, {} , 3 , nil %>
             <%= c.label :Phones %>
           </div>
           <div>
-            <%= c.radio_button :Robotics, 4 %>
+            <%= c.check_box :Robotics, {} , 4 , nil %>
             <%= c.label :Robotics %>
           </div>
         </div>
