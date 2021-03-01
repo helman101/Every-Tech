@@ -10,7 +10,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class='max-w'>
     <header class='border border-top-0'>
       <%= render 'shared/navbar' %>
     </header>
@@ -20,7 +20,7 @@
       <%= yield %>
     </main>
 
-    <footer>
+    <footer class='max-w'>
       <%= render 'shared/footer' %>
     </footer>
   </body>
