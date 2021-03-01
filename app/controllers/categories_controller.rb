@@ -1,6 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @most_pop = Article.includes(:votes).group(:article_id).first
+    @most_pop = Article.where('id = ?', Vote.maximum('article_id')).first || Article.order('created_at desc').first
     @categories = Category.all
   end
 
