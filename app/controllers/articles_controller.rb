@@ -19,6 +19,11 @@ class ArticlesController < ApplicationController
 
   def show
     @article = Article.find(params[:id])
+    @categories = []
+    @article.categories.each do |category|
+      @categories << category.name
+    end
+    @categories = @categories.join(', ')
   end
 
   private 
