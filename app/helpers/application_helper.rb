@@ -1,4 +1,12 @@
 module ApplicationHelper
+  def show_or_not
+    if Article.any?
+      render partial: 'have_articles'
+    else
+      render partial: 'no_articles'
+    end
+  end
+
   def login_or_logout
     if session[:current_user_id].nil?
       render partial: 'shared/log_in'
