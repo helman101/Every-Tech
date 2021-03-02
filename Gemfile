@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '2.7.0'
 
 gem 'bootstrap', '~> 5.0.0.beta1'
 gem 'jquery-rails'
