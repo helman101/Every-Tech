@@ -4,9 +4,7 @@
 
 ## App screenshot
 
-<center>
-  <img src="./docs/screenshot.png" width="75%" height="auto" />
-</center>
+<img src="./docs/screenshot.png" width="100%"/>
 
 ## Presentation Project Video
 
