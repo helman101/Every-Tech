@@ -8,8 +8,7 @@ class SessionsController < ApplicationController
       redirect_to root_path, notice: 'Sing in successfully'
     else
       session[:current_user_id] = nil
-      flash.now[:alert] = 'User doesn\'t exist'
-      render 'sign_in'
+      redirect_to new_user_path, alert: 'User doesn\'t exist'
     end
   end
 

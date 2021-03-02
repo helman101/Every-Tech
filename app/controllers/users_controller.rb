@@ -12,8 +12,7 @@ class UsersController < ApplicationController
       session[:current_user_id] = @user.id
       redirect_to root_path, notice: 'Sign up successfully'
     else
-      flash[:alert] = 'User does not exist'
-      render :sign_in
+      redirect_to new_user_path, alert: 'User already exist'
     end
   end
 
