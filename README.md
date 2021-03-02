@@ -6,8 +6,7 @@
 
 <img src="./docs/screenshot.png" width="100%"/>
 
-## Presentation Project Video
-
+## [Presentation Project Video](https://www.loom.com/share/99693b58e69648dd8b87f341a3ea37a5)
 
 ## About
 
