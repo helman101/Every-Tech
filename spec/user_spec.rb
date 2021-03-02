@@ -8,8 +8,8 @@ RSpec.describe User, type: :model do
   end
 
   context 'associations' do
-    it { should have_many(:authored_articles).class_name('Article').with_foreign_key('author_id') }
-    it { should have_many(:votes) }
+    it { should have_many(:authored_articles).class_name('Article').with_foreign_key('author_id').dependent(:destroy) }
+    it { should have_many(:votes).dependent(:destroy) }
     it { should have_many(:voted_articles).through(:votes).source(:article) }
   end
 end
