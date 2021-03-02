@@ -14,7 +14,7 @@ Every-Tech is a capstone project for the Microverse course, in this project, I u
 
 ## Live Link
 
-[Every-Tech](https://secure-brushlands-86938.herokuapp.com/)
+[Every-Tech](https://nameless-temple-75224.herokuapp.com)
 
 ## Built With
 
