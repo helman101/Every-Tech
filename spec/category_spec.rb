@@ -8,6 +8,6 @@ RSpec.describe Category, type: :model do
   end
 
   context 'associations' do
-    it { should have_and_belong_to_many(:articles)}
+    it { should have_and_belong_to_many(:articles) }
   end
 end

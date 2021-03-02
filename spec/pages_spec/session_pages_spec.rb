@@ -15,7 +15,7 @@ RSpec.describe 'Session and registration', type: :system do
       click_on 'Sign up'
       click_on 'WRITE AN ARTICLE'
       expect(page).to have_content('Create An Article!')
-    end 
+    end
 
     it 'show an alert if the user already exists' do
       visit new_user_path
@@ -48,6 +48,6 @@ RSpec.describe 'Session and registration', type: :system do
       click_on 'Sign in'
       click_on 'WRITE AN ARTICLE'
       expect(page).to have_content('Create An Article!')
-    end 
+    end
   end
 end

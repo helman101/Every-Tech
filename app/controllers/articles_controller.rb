@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
   include ArticlesHelper
 
-  before_action :require_login, only: [:create, :new]
+  before_action :require_login, only: %i[create new]
 
   def new
     @article = Article.new
@@ -26,10 +26,9 @@ class ArticlesController < ApplicationController
     @categories = @categories.join(', ')
   end
 
-  private 
+  private
 
   def article_params
     params.require(:article).permit(:title, :content, :image)
   end
-
 end

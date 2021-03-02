@@ -28,17 +28,17 @@ module ApplicationHelper
   end
 
   def vote_or_unvote(article)
-    if user_sign_in?
-      vote = Vote.find_by(article: article, user: current_user)
-      if vote
-        render partial: 'shared/unvote', locals: { unvote: vote, article: article }
-      else
-        render partial: 'shared/vote', locals: { vote: vote, article: article }
-      end
+    return unless user_sign_in?
+
+    vote = Vote.find_by(article: article, user: current_user)
+    if vote
+      render partial: 'shared/unvote', locals: { unvote: vote, article: article }
+    else
+      render partial: 'shared/vote', locals: { vote: vote, article: article }
     end
   end
 
   def user_sign_in?
-    session[:current_user_id] 
+    session[:current_user_id]
   end
 end

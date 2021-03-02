@@ -8,9 +8,8 @@ class ApplicationController < ActionController::Base
   end
 
   def require_login
-    unless session[:current_user_id]
-      flash[:alert] = 'You must be signed in to access this section'
-      redirect_to user_sign_in_path
-    end
+    return if session[:current_user_id]
+
+    redirect_to user_sign_in_path, alert: 'You must be signed in to access this section'
   end
 end
