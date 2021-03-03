@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
+  include UsersHelper
+
   before_action :require_login, only: [:show]
+  before_action :same_user?, only: [:show]
 
   def new
     @user = User.new
@@ -18,6 +21,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    @my_articles = @user.authored_articles
+    @voted_articles = @user.voted_articles
   end
 
   private
