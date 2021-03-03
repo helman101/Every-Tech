@@ -30,5 +30,4 @@ module ArticlesHelper
 
     flash[:form_errors]['image'].first if flash[:form_errors].include?('image')
   end
-
 end
