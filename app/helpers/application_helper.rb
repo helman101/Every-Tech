@@ -41,4 +41,10 @@ module ApplicationHelper
   def user_sign_in?
     session[:current_user_id]
   end
+
+  def user_link
+    return unless user_sign_in?
+
+    render partial: 'shared/user'
+  end
 end
