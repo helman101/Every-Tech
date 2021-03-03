@@ -16,7 +16,7 @@
 
       <div class="form-group pb-3 d-flex flex-column">
         <%= f.label :image, class: 'mb-1' %>
-        <%= f.file_field :image, class: 'form-control-file', accept: 'image/*' %>
+        <%= f.file_field :image, direct_upload: true, class: 'form-control-file', accept: 'image/*' %>
         <span class='error text-danger'><%= image_error %> </span>
       </div>
 
