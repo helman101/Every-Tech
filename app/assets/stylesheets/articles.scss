@@ -1,3 +1,39 @@
 // Place all the styles related to the Articles controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import 'application.scss';
+
+.create-article {
+  textarea {
+    height: 30vh;
+  }
+
+  select {
+    width: 50%;
+  }
+}
+
+.articles {
+  max-width: 60%;
+
+  .title {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .article-image {
+    height: 30vh;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .info-group {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+}
