@@ -13,6 +13,7 @@ class ArticlesController < ApplicationController
       create_categories(params[:article][:categories], @article)
       redirect_to article_path(@article), notice: 'Article created succesfully'
     else
+      flash[:form_errors] = @article.errors
       redirect_to new_article_path, alert: 'This article can\'t be create'
     end
   end
