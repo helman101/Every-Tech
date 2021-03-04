@@ -3,7 +3,9 @@
      <%= link_to category_path(category) do %>
       <div class='gradient'></div>
     <% end %>
-    <span class='category-name text-white'><%= category.name %></span>
+    <%= link_to category_path(category) do %>
+      <span class='category-name text-white'><%= category.name %></span>
+    <% end %>
     <span class='article-title text-white'><%= link_to category.articles.recent.title, category.articles.recent %></span>
     <%= image_tag category.articles.recent.image %>
   </div>

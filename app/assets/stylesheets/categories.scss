@@ -102,6 +102,9 @@
       position: absolute;
       bottom: 10%;
       left: 8%;
+      a:hover {
+        color: $light-orange-color;
+      }
     }
 
     img {
