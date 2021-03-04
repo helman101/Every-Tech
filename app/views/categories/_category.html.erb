@@ -4,7 +4,7 @@
       <div class='gradient'></div>
     <% end %>
     <span class='category-name text-white'><%= category.name %></span>
-    <span class='article-title text-white'><%= link_to category.articles.order('created_at desc').first.title, category.articles.order('created_at desc').first %></span>
-    <%= image_tag category.articles.order('created_at desc').first.image %>
+    <span class='article-title text-white'><%= link_to category.articles.recent.title, category.articles.recent %></span>
+    <%= image_tag category.articles.recent.image %>
   </div>
 </article>

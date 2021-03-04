@@ -8,4 +8,6 @@ class Article < ApplicationRecord
   has_many :votes, dependent: :destroy
   has_many :voting_users, through: :votes, source: :user
   has_one_attached :image, dependent: :destroy
+
+  scope :recent, -> { order('created_at desc').first }
 end
