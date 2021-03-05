@@ -1,0 +1,169 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+@import 'bootstrap';
+
+$brown-color: #4e443f;
+$orange-color: #f22405;
+$light-orange-color: #f76208;
+$hoover-orange-color: #b94b07;
+$darker-yellow-color: #f2a649;
+$yellow-color: #f2e30c;
+
+.text-brown {
+  color: $brown-color;
+}
+
+.bg-brown {
+  background-color: $brown-color;
+}
+
+.text-orange {
+  color: $orange-color;
+}
+
+.bg-orange {
+  background-color: $orange-color;
+}
+
+.text-light-orange {
+  color: $light-orange-color;
+}
+
+.text-darker-yellow {
+  color: $darker-yellow-color;
+}
+
+.bg-light-orange {
+  background-color: $light-orange-color;
+}
+
+.max-w {
+  max-width: 1300px;
+}
+
+body {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer a {
+  margin-right: 0.5rem;
+  color: $light-orange-color;
+  height: 30px;
+  text-decoration: none;
+}
+
+.user-forms a {
+  color: $light-orange-color;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.nav-links {
+  font-size: 0.8rem;
+
+  a {
+    margin-right: 0.7rem;
+    color: gray;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: $light-orange-color;
+    text-decoration: underline;
+  }
+}
+
+.user-forms {
+  width: 30%;
+  min-width: 400px;
+  box-shadow: 0 0 4px 3px rgba(128, 128, 128, 0.603);
+
+  a:hover {
+    color: #b94b07;
+    text-decoration: underline;
+  }
+}
+
+.signs {
+  height: 86vh;
+}
+
+.navbar {
+  min-height: 60px;
+
+  .navbar-brand {
+    font-size: 1.3rem;
+  }
+}
+
+.footer {
+  min-height: 61px;
+  font-size: 0.9rem;
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  .info {
+    a {
+      margin-right: 0.5rem;
+      color: $light-orange-color;
+      height: 30px;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #ff741e;
+      text-decoration: underline;
+    }
+  }
+
+  .social-links {
+    span:first-child {
+      margin-right: 0.8rem;
+    }
+  }
+
+  svg {
+    fill: $light-orange-color;
+    width: 30px;
+    height: auto;
+  }
+}
+
+.alert {
+  max-height: 30px;
+  padding: 0;
+  z-index: 1000;
+}
+
+main {
+  min-height: 86vh;
+}
+
+.vote {
+  color: $darker-yellow-color;
+  text-decoration: none;
+
+  &:hover {
+    color: #c4873c;
+    text-decoration: underline;
+  }
+}

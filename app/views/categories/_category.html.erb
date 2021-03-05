@@ -1,0 +1,12 @@
+<article class='cate col p-0'>
+  <div class='wrapper w-100 d-flex flex-column position-relative justify-content-between'>
+     <%= link_to category_path(category) do %>
+      <div class='gradient'></div>
+    <% end %>
+    <%= link_to category_path(category) do %>
+      <span class='category-name text-white'><%= category.name %></span>
+    <% end %>
+    <span class='article-title text-white'><%= link_to category.articles.recent.title, category.articles.recent %></span>
+    <%= image_tag category.articles.recent.image %>
+  </div>
+</article>

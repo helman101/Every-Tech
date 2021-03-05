@@ -1,0 +1,12 @@
+<article class='article-img'>
+  <%= image_tag article.image %>
+</article>
+
+<article class='article-text p-3 d-flex flex-column'>
+  <span class='category mb-3 pb-1'><%= @category.name %></span>
+  <span class='title mb-3'><%= article.title %></span>
+  <p content='content'><%= article.content.truncate(150) %></p>
+  <span class='title mb-3'><span class="text-light-orange">Author:</span> <%= article.author.name %></span>
+  <span><%= vote_or_unvote(article) %><span class='text-darker-yellow'> | <%= article.votes.count %> Votes</span></span>
+  <%= link_to 'Read more..', article_path(article) %>
+</article>

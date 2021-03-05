@@ -1,0 +1,13 @@
+<div class="user container d-flex flex-column justify-content-center align-items-center h-100 pt-5">
+  <h1 class='pb-3'>Welcome <%= @user.name %></h1>
+  <div>
+    <h3>My articles</h3>
+    <ul>
+      <%= render partial: 'article', collection: @my_articles %>
+    </ul>
+    <h3>Voted articles</h3>
+    <ul>
+      <%= render partial: 'article', collection: @voted_articles %>
+    </ul>
+  </div>
+</div>

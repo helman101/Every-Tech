@@ -1,0 +1,11 @@
+<nav class='navbar bg-light p-2 h-100 border-bottom'>
+  <%= link_to 'EveryTech', root_path, class: 'navbar-brand text-brown pl-3' %>
+  <div class="nav-links">
+    <%= link_to 'HOME', root_path %>
+    <%= link_to 'WRITE AN ARTICLE', new_article_path %>
+    <%= user_link %>
+  </div>
+  <div class="nav-links">
+    <%= login_or_logout %>
+  </div>
+</nav>

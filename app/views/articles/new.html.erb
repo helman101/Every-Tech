@@ -1,0 +1,48 @@
+<section class='create-article container d-flex flex-column align-items-center pt-4 pb-4'>
+  <h1 class='text-center mb-3'>Create An Article!</h1>
+  <div class="article-form wrapper w-50">
+    <%= form_for @article do |f| %>
+      <div class="form-group pb-3">
+        <%= f.label :title, class: 'mb-1' %>
+        <%= f.text_field :title, autofocus: true, class: 'form-control' %>
+        <span class='error text-danger'><%= title_error %> </span>
+      </div>
+
+      <div class="form-group pb-3">
+        <%= f.label :content, class: 'mb-1' %>
+        <%= f.text_area :content, class: 'form-control' %>
+        <span class='error text-danger'><%= content_error %> </span>
+      </div>
+
+      <div class="form-group pb-3 d-flex flex-column">
+        <%= f.label :image, class: 'mb-1' %>
+        <%= f.file_field :image, direct_upload: true, class: 'form-control-file', accept: 'image/*' %>
+        <span class='error text-danger'><%= image_error %> </span>
+      </div>
+
+      <%= f.fields_for :categories do |c| %>
+        <%= c.label :name, 'Select categories', class: 'mb-1' %> <br>
+        <div class="d-flex form-group justify-content-between mb-3">
+          <div>
+            <%= c.check_box 'Video Games', {} , 1 , nil%>
+            <%= c.label 'Video Games' %>
+          </div>
+          <div>
+            <%= c.check_box :Computers, {} , 2 , nil %>
+            <%= c.label :Computers %>
+          </div>
+          <div>
+            <%= c.check_box :Phones, {} , 3 , nil %>
+            <%= c.label :Phones %>
+          </div>
+          <div>
+            <%= c.check_box :Robotics, {} , 4 , nil %>
+            <%= c.label :Robotics %>
+          </div>
+        </div>
+      <% end %>
+
+      <%= f.submit 'Create', class: 'btn btn-success w-100' %>
+    <% end %>
+  </div>
+</section>

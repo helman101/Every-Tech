@@ -1,0 +1,15 @@
+<section class='most-pop'>
+  <div class='wrapper w-100 d-flex flex-column position-relative justify-content-between'>
+    <%= link_to article_path(@most_pop) do %>
+      <div class='gradient'></div>
+    <% end %>
+      <span class='article-title text-white'><%= link_to @most_pop.title, article_path(@most_pop) %></span>
+      <%= image_tag @most_pop.image %>
+  </div>
+</section>
+
+<section class='categories'>
+  <div class="row m-0">
+    <%= render partial: 'category', collection: @categories %>
+  </div>
+</section>

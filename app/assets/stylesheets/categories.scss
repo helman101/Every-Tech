@@ -1,0 +1,129 @@
+// Place all the styles related to the Categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+@import 'bootstrap';
+@import 'application.scss';
+
+.categories a {
+  color: whitesmoke;
+  text-decoration: none;
+}
+
+.most-pop a {
+  color: $light-orange-color;
+  text-decoration: none;
+}
+
+.art-x-cat a {
+  color: $light-orange-color;
+  text-decoration: none;
+}
+
+.most-pop img {
+  width: 100%;
+  height: 65vh;
+  object-fit: cover;
+}
+
+.art-x-cat {
+  height: 86vh;
+
+  .article-img {
+    background-color: lightcoral;
+    width: 25%;
+    height: 43vh;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .article-text {
+    width: 25%;
+    height: 43vh;
+
+    .category {
+      font-weight: bold;
+      color: $darker-yellow-color;
+      border-bottom: 2px solid $darker-yellow-color;
+      width: max-content;
+    }
+  }
+
+  a:hover {
+    color: #ff741e;
+    text-decoration: underline;
+  }
+}
+
+.most-pop {
+  height: 65vh;
+
+  a:hover {
+    color: #ff741e;
+    text-decoration: underline;
+  }
+}
+
+.most-pop .article-title {
+  font-size: 2rem;
+  position: absolute;
+  bottom: 5%;
+  left: 3%;
+}
+
+.categories a:hover {
+  text-decoration: underline;
+}
+
+.categories {
+  margin-left: auto;
+  margin-right: auto;
+
+  .cate {
+    height: 21vh;
+  }
+
+  .wrapper {
+    height: 100%;
+
+    .category-name {
+      border-bottom: 3px solid $yellow-color;
+      width: max-content;
+      position: absolute;
+      top: 5%;
+      left: 8%;
+    }
+
+    .article-title {
+      position: absolute;
+      bottom: 10%;
+      left: 8%;
+
+      a:hover {
+        color: $light-orange-color;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.gradient {
+  position: absolute;
+  object-fit: fill;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.562);
+}
+
+.no-articles {
+  height: 80vh;
+}
