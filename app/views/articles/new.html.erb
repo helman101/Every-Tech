@@ -21,24 +21,9 @@
       </div>
 
       <%= f.fields_for :categories do |c| %>
-        <%= c.label :name, 'Select categories', class: 'mb-1' %> <br>
-        <div class="d-flex form-group justify-content-between mb-3">
-          <div>
-            <%= c.check_box 'Video Games', {} , 1 , nil%>
-            <%= c.label 'Video Games' %>
-          </div>
-          <div>
-            <%= c.check_box :Computers, {} , 2 , nil %>
-            <%= c.label :Computers %>
-          </div>
-          <div>
-            <%= c.check_box :Phones, {} , 3 , nil %>
-            <%= c.label :Phones %>
-          </div>
-          <div>
-            <%= c.check_box :Robotics, {} , 4 , nil %>
-            <%= c.label :Robotics %>
-          </div>
+        <%= c.label :id, 'Select categories', class: 'mb-1' %> <br>
+        <div class="d-flex form-group align-items-center justify-content-between mb-3">
+          <%= c.collection_check_boxes(:category_ids, Category.all, :id, :name, { class: 'mr-3' }) %>
         </div>
       <% end %>
 
